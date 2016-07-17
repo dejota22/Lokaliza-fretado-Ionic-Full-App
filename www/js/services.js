@@ -6,6 +6,7 @@ angular.module('starter')
   var isAuthenticated = false;
   var role = 'admin';
   var authToken;
+  var url_api = 'https://assemblysystems.com.br/localiza/';
 
   function loadUserCredentials() {
     var token = window.localStorage.getItem(LOCAL_TOKEN_KEY);
@@ -56,7 +57,7 @@ angular.module('starter')
 
 
          $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-       var link = 'https://assemblysystems.com.br/localiza/api/user/login/';
+       var link = url_api+'api/user/login/';
 
        $http.post(link, {user : name,senha:pw}).then(function (res){
             var response = res.data;

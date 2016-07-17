@@ -12,6 +12,7 @@ angular.module('starter')
     $scope.fretado = '';
     $scope.track = false;
    $scope.INTERVAL = 10000;
+   $scope.api = 'https://assemblysystems.com.br/localiza/';
 
 $scope.$on("$ionicView.enter", function () {
    $ionicHistory.clearCache();
@@ -65,7 +66,7 @@ $scope.trackBusStart = function(){
 	if($scope.track ==true){
 
  $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-        var link = 'https://assemblysystems.com.br/localiza/api/coordenadas/update';
+        var link = $scope.api+'api/coordenadas/update';
             //console.log(link);
         navigator.geolocation.getCurrentPosition(function(pos) {
            
@@ -169,7 +170,7 @@ $scope.trackBusStart = function(){
         }
 
         $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-        var link = 'https://assemblysystems.com.br/localiza/api/users/create';
+        var link = $scope.api+'api/users/create';
         $scope.loadingshow();
         $http.post(link, {
             nome: data.nome,
@@ -308,7 +309,7 @@ $scope.trackBusStart = function(){
 
         function getMarkers() {
             $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-            var link = 'https://assemblysystems.com.br/localiza/api/coordenadas/' + $scope.fretado + '/';
+            var link = $scope.api+'api/coordenadas/' + $scope.fretado + '/';
             //console.log(link);
             $http.get(link).then(function(res) {
                 var length = Object.keys(res.data).length;
