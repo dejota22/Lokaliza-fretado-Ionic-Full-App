@@ -6,7 +6,7 @@ angular.module('starter')
   var isAuthenticated = false;
   var role = 'admin';
   var authToken;
-  var url_api = 'https://assemblysystems.com.br/localiza/';
+  var url_api = 'Colocar a url da api';
 
   function loadUserCredentials() {
     var token = window.localStorage.getItem(LOCAL_TOKEN_KEY);

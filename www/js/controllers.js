@@ -12,7 +12,7 @@ angular.module('starter')
     $scope.fretado = '';
     $scope.track = false;
    $scope.INTERVAL = 10000;
-   $scope.api = 'https://assemblysystems.com.br/localiza/';
+   $scope.api = 'Colocar a url da api';
 
 $scope.$on("$ionicView.enter", function () {
    $ionicHistory.clearCache();
