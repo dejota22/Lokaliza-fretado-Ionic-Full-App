@@ -1,0 +1,27 @@
+
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+      <h1 class="title">Escolha uma das opções</h1>
+      <button class="button button-clear" ng-click="closeModaAdmin()">Cancelar</button>
+    </ion-header-bar>
+    <ion-content>
+         
+<div class="padding">
+ 
+    <div  ng-if="role">
+      <button class="button button-block button-positive" ng-click="goto('main.admin');">
+       ALOCAR LUGARES
+      </button>
+      <button class="button button-block button-balanced" ng-click="startTracking();">
+      COMEÇAR RASTREAMENTO DE ONIBUS
+      </button>
+       <button class="button button-block button-assertive" ng-click="stopTracking();">
+      PARAR RASTREAMENTO DE ONIBUS
+      </button>
+    </div>
+    
+</div>
+    </ion-content>
+  </ion-modal-view>
+
+

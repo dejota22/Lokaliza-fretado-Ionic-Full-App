@@ -1,0 +1,27 @@
+<ion-view view-title="Dashboard" name="dashboard-view">
+
+  <ion-nav-buttons side="right">
+    <button class="button icon-left ion-log-out button-stable" ng-click="logout()">Sair</button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+    <div class="row"><div class="col text-center">
+      <h3 class="title">Bem vindo {{username}}!</h3>
+      
+      <br><br><br>
+      <button class="button button-full button-positive brown" ng-click="choice('capital');">
+        Fretados da Capital
+      </button>
+      <button class="button button-full button-energized blue" ng-click="choice('litoral')">
+        Fretados do Litoral
+      </button>
+      <button class="button button-full button-energized red" ng-click="choice('interior')">
+        Fretados do Interior
+      </button>
+
+      
+      <br><br>
+      
+    </div></div>
+  </ion-content>
+</ion-view>

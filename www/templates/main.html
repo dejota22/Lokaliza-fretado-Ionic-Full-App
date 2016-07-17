@@ -1,0 +1,35 @@
+<ion-view>
+
+   
+
+  <ion-tabs class="tabs-icon-top tabs-balanced">
+      <ion-tab title="">
+      <ion-nav-view name=""></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="home" icon="ion-home" href="#/main/dash">
+      <ion-nav-view name="dash-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Capital" icon="ion-earth" ng-click="choice('capital');">
+      <ion-nav-view name="capital-tab"></ion-nav-view>
+    </ion-tab>
+      <ion-tab title="Litoral" icon="ion-earth" ng-click="choice('litoral');">
+      <ion-nav-view name="litoral-tab"></ion-nav-view>
+    </ion-tab>
+      <ion-tab title="Interior" icon="ion-earth" ng-click="choice('interior');">
+      <ion-nav-view name="interior-tab"></ion-nav-view>
+    </ion-tab>
+
+  <ion-tab title="Admin" icon="ion-briefcase" ng-click="modalAdmin()">
+      <ion-nav-view name="admin-tab" ></ion-nav-view>
+    </ion-tab>
+     <ion-tab title="" >
+      <ion-nav-view name="admin-tab"></ion-nav-view>
+    </ion-tab>
+    
+       <ion-tab title="" >
+      <ion-nav-view name="mapa_user-tab"></ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+</ion-view>

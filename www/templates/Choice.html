@@ -1,0 +1,60 @@
+
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+      <h1 class="title">Escolha uma das opções</h1>
+      <button class="button button-clear" ng-click="closeModaChoice()">Cancelar</button>
+    </ion-header-bar>
+    <ion-content>
+         
+<div class="padding">
+    <div  ui-sref="regiao" ng-if="regiao == 'capital'">
+
+     <button class="button button-block button-balanced"  ng-click="verMapa('capital');closeModaChoice();" >
+    
+     VER MAPA
+      </button>
+      <button class="button button-block button-positive" ng-click="goto('main.capital');closeModaChoice();"> 
+       VER SITE
+      </button>
+
+    </div>
+   
+      
+   
+  
+    
+</div>
+
+    <div  ui-sref="regiao" ng-if="regiao == 'litoral'">
+
+     <button class="button button-block button-balanced"  ng-click="verMapa('litoral');closeModaChoice();" >
+    
+     VER MAPA
+      </button>
+      <button class="button button-block button-positive" ng-click="goto('main.litoral');closeModaChoice();"> 
+       VER SITE
+      </button>
+
+    </div>
+
+      <div ui-sref="regiao" ng-if="regiao == 'interior'">
+
+     <button class="button button-block button-balanced"  ng-click="verMapa('interior');closeModaChoice();" >
+    
+     VER MAPA
+      </button>
+      <button class="button button-block button-positive" ng-click="goto('main.interior');closeModaChoice();"> 
+       VER SITE
+      </button>
+
+    </div>
+   
+      
+   
+  
+    
+</div>
+    </ion-content>
+  </ion-modal-view>
+
+
